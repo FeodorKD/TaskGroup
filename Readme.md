@@ -1,7 +1,12 @@
-npm i - installing dependencies
-npm run dev - running app in localhost
-npm run buuild - running build
+<p>npm i - installing dependencies</p>
+<p>npm run dev - running app in localhost</p>
+<p>npm run buuild - running build</p>
 
-authorization: 
-  username - admin
-  password - root
+<h3>authorization: </h3>
+<ul>
+  <li>username - admin</li>
+  <li>password - root</li>
+</ul>
+
+<p>Check the deployed app</p>
+<p>https://taskgroup-f5ff0.web.app/</p>
