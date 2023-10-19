@@ -1,6 +1,6 @@
 <p>npm i - installing dependencies</p>
 <p>npm run dev - running app in localhost</p>
-<p>npm run buuild - running build</p>
+<p>npm run build - running build</p>
 
 <h3>authorization: </h3>
 <ul>
