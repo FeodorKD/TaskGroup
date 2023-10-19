@@ -1,18 +1,15 @@
 import React, {FC} from 'react';
 import {IProduct} from "../../Entities/Product";
-import {Button, Card} from "antd";
+import {Card} from "antd";
 import AppImage from "../../Shared/ui/Image/AppImage";
 import classes from "./ProductCart.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 interface CardProps  {
     product: IProduct,
 }
 
 const ProductCart:FC<CardProps> = ({product}) => {
-    const navigate = useNavigate()
-    const clickHandler = (id: number) => {
-        navigate(`/product/${id}`)
-    }
+
 
     return (
         <Card
@@ -28,7 +25,7 @@ const ProductCart:FC<CardProps> = ({product}) => {
             <p className={classes.price}>
                 {`${product.price}` + '$'}
             </p>
-            <Button type="primary" size="small" onClick={() => clickHandler(product.id)}>View</Button>
+            <Link to={`/product/${product.id}`}>View</Link>
         </Card>
     );
 };

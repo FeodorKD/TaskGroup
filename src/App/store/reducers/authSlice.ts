@@ -4,8 +4,15 @@ interface AuthState {
     isAuth: boolean
 }
 
+const getInitial = (): boolean => {
+    if(!localStorage.getItem('isAuth')){
+        return false
+    }
+    return localStorage.getItem('isAuth') !== 'false'
+}
+
 const initialState: AuthState = {
-    isAuth: localStorage.getItem('isAuth') !== 'false'
+    isAuth: getInitial()
 }
 
 export const authSlice = createSlice({

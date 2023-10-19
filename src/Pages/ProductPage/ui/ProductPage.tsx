@@ -2,18 +2,18 @@ import React, {FC} from 'react';
 import classes from "./ProductPage.module.css";
 import {useParams} from "react-router-dom";
 import {oneProductApi} from "../../../App/store/reducers/oneProductApi";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,} from "react-router-dom";
 import {Button, Image, Layout, Typography,} from "antd";
 const ProductPage: FC = () => {
     const navigate = useNavigate()
     const {id} = useParams<{id?: string}>()
-    const {data, isLoading} =  oneProductApi.useFetchOneProductQuery(Number(id))
-    if (!data) return (
-        <h1>Error in fetching data</h1>
+    const {data, isLoading, isError} =  oneProductApi.useFetchOneProductQuery(Number(id))
+    if (!data || isLoading) return (
+        <h1>loading...</h1>
     )
 
-    if (isLoading) return (
-        <h1>loading...</h1>
+    if (isError) return (
+        <h1>Error in fetching data</h1>
     )
 
     return (
