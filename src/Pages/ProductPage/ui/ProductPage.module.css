@@ -1,0 +1,21 @@
+.layout{
+    width: 100vw;
+    height: 100vh;
+}
+
+.info {
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 80vh;
+    max-width: 40vw;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

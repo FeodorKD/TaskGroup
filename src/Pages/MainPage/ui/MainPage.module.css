@@ -1,0 +1,19 @@
+.content {
+    margin: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.select {
+    width: 200px;
+}
+
+.menu {
+    height: 64px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
